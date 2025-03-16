@@ -5,19 +5,6 @@ import { getFarewellText, getRandomWord } from "./utils";
 import Confetti from "react-confetti";
 import "./App.css";
 
-/**
- * Backlog:
- *
- * ✅ Farewell messages in status section
- * ✅ Disable the keyboard when the game is over
- * ✅ Fix a11y issues
- * - Make the New Game button reset the game
- * - Choose a random word from a list of words
- * - Confetti drop when the user wins
- *
- * Challenge: Disable the keyboard when the game is over
- */
-
 export default function AssemblyEndgame() {
   // State values
   const [currentWord, setCurrentWord] = useState(getRandomWord());
@@ -138,8 +125,7 @@ export default function AssemblyEndgame() {
   }
   return (
     <main>
-      {isGameWon && <Confetti 
-      recycle={false} numberOfPieces={1000} />}
+      {isGameWon && <Confetti recycle={false} numberOfPieces={1000} />}
       <header>
         <h1>Assembly: Endgame</h1>
         <p>
